@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <style type="text/css">
+
+    body{
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+    }
+
+    button {
+      font-size: 1.6rem;
+      border: none;
+      background-color: white;
+      color: #007ACA;
+      cursor:pointer;
+      text-decoration: underline;
+    }
+
+    button:hover{
+      color: #1C98EB;
+      font-weight: bold;
+    }
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Redirect to user test</title>
+  <meta name="description" content="A simple page to give user the link they need.">
+  <meta name="author" content="BG_JOPA">
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+</head>
+
+<body>
+  <a href="#" id="aTag">
+    <button class="favorite styled" type="button" id="serveLink" onclick="getRandomLink()">
+     Fortsett videre til brukertest
+    </button>
+   </a>
+
+
+  <script type="text/javascript">
+  var webpages = [];
+  webpages.push("https://t.maze.co/43420800");
+  webpages.push("https://t.maze.co/43444763");
+
+  function getRandomLink() {
+    var random_page =Math.floor(Math.random()*webpages.length);
+    var redirect = webpages[random_page];
+    document.getElementById("serveLink").click();
+    document.getElementById("aTag").href=redirect;
+  }
+
+  </script>
+</body>
+</html>
